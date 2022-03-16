@@ -3,17 +3,16 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	Scanner scanner=new Scanner(System.in);
-    System.out.println("birinci kenarı giriniz");
-    int first= scanner.nextInt();
-    System.out.println("ikinci kenarı giriniz");
-    int second= scanner.nextInt();
-    System.out.println("üçüncü kenarı giriniz");
-    int third= scanner.nextInt();
-    int u= (first+second+third)/2;
-    double alan= Math.sqrt(u* (u-first)*(u-second)*(u-third));
-    System.out.println("üçgenimizin alanı :"+alan);
+	    Scanner scanner=new Scanner(System.in);
+        System.out.println("üssü hesaplanacak sayıyı giriniz");
+        int number= scanner.nextInt();
+        System.out.println("kaçıncı kuvveti alınacak");
+        int pow=scanner.nextInt();
+        int result=1;
 
-
+        for (int i =1; i<=pow;i++){
+            result*=number;
+        }
+        System.out.println(number+ " sayısının "+ pow+" kuvveti :"+ result);
     }
 }
