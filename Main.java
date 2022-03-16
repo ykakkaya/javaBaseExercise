@@ -4,15 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 	    Scanner scanner=new Scanner(System.in);
-        System.out.println("üssü hesaplanacak sayıyı giriniz");
-        int number= scanner.nextInt();
-        System.out.println("kaçıncı kuvveti alınacak");
-        int pow=scanner.nextInt();
-        int result=1;
+        int number=scanner.nextInt();
+        int counter=0;
+        int degree=0;
+        int result=0;
+        while(number!=0){
 
-        for (int i =1; i<=pow;i++){
-            result*=number;
+            degree=number%10;
+
+            number/=10;
+
+            result+=degree;
+
         }
-        System.out.println(number+ " sayısının "+ pow+" kuvveti :"+ result);
+        System.out.println("basamaklar toplamı :"+ result);
+
+
     }
 }
