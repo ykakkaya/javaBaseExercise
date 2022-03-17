@@ -3,20 +3,27 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-	    System.out.println("bir sayı giriniz");
-        int number= scanner.nextInt();
-        int result=0;
-        for (int i=1; i<=(number/2); i++){
-            if (number%i==0){
-                result+=i;
-                System.out.println("i sayısı:"+i);
+
+        for(int i=2;i<=100;i++)
+        {
+            int kontrol = 0;
+            for (int j = 2; j < i; j++)
+            {
+                if (i% j == 0)
+                {
+                    kontrol = 1;
+                    break;
+
+                }
             }
-        }
-        if (number==result){
-            System.out.println("sayımız mükemmel sayıdır");
-        }else{
-            System.out.println("sayımız mükemmel sayı değildir");
+
+            if(kontrol==0)
+            {
+                System.out.print(i+" ");
+
+            }
         }
     }
 }
+
+
