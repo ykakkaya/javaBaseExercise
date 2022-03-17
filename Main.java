@@ -1,19 +1,22 @@
 package com.company;
-import  java.util.*;
+import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("kaç tane sayı gireceksiniz");
-        int n= scanner.nextInt();
-        int[]numbers=new int[n];
-        for (int i=0; i<n;i++){
-            System.out.println("Sayı girişi yapınız");
-            int input= scanner.nextInt();
-            numbers[i]=input;
+        Scanner scanner=new Scanner(System.in);
+	    System.out.println("bir sayı giriniz");
+        int number= scanner.nextInt();
+        int result=0;
+        for (int i=1; i<=(number/2); i++){
+            if (number%i==0){
+                result+=i;
+                System.out.println("i sayısı:"+i);
+            }
         }
-        Arrays.sort(numbers);
-        System.out.println("min değerimiz "+ numbers[0]+ " max. değerimiz : "+ numbers[n-1] );
-
+        if (number==result){
+            System.out.println("sayımız mükemmel sayıdır");
+        }else{
+            System.out.println("sayımız mükemmel sayı değildir");
+        }
     }
 }
