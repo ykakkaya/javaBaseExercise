@@ -3,27 +3,21 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+	    int first=1;
+        int second=1;
+        int number=first+second;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("kaç elemanlı olsun");
+        int elemanSayisi=scanner.nextInt();
 
-        for(int i=2;i<=100;i++)
-        {
-            int kontrol = 0;
-            for (int j = 2; j < i; j++)
-            {
-                if (i% j == 0)
-                {
-                    kontrol = 1;
-                    break;
+        System.out.print(first+","+second+","+number+",");
+        for (int i=1; i<=(elemanSayisi-3);i++){
+            first =second;
+            second=number;
+            number=first+second;
+            System.out.print(number+",");
 
-                }
-            }
 
-            if(kontrol==0)
-            {
-                System.out.print(i+" ");
-
-            }
         }
     }
 }
-
-
