@@ -1,13 +1,29 @@
 package com.company;
-import  java.util.*;
+import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	    Scanner scanner= new Scanner(System.in);
-        System.out.println("taban değerini giriniz");
-        int taban= scanner.nextInt();
-        System.out.println("üs değerini giriniz");
-        int us= scanner.nextInt();
-        System.out.println(Math.pow(taban,us));
+
+        for(int i=2;i<=100;i++)
+        {
+            int kontrol = 0;
+            for (int j = 2; j < i; j++)
+            {
+                if (i% j == 0)
+                {
+                    kontrol = 1;
+                    break;
+
+                }
+            }
+
+            if(kontrol==0)
+            {
+                System.out.print(i+" ");
+
+            }
+        }
     }
 }
+
+
