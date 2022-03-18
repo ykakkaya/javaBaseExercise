@@ -1,0 +1,26 @@
+Insertion-Sort
+[22,27,16,2,18,6] -> Insertion Sort
+1- [2,27,16,22,18,6]
+2- [2,6,16,22,18,27]
+3- [2,6,16,22,18,27]
+4- [2,6,16,18,22,27]
+5- [2,6,16,18,22,27]
+Big-O Notation
+n + (n-1) + (n-2) + ... + 1 = O(n^2)
+Time Complexity
+Worst case: The number we are looking for is at the end Average case: The number we are looking for is in the middle Best case: The number we are looking for is at the beginning of the array.
+
+Worst case: O(n^2)  
+Average case: O(n^2)  
+Best case: O(n)
+In which case does the number 18 fall under the scope after the array is sorted? Please type.
+Average case
+[7,3,5,8,2,9,4,15,6] -> Insertion Sort
+1- [2,7,5,8,3,9,4,15,6]
+2- [2,3,5,8,7,9,4,15,6]
+3- [2,3,4,8,7,9,5,15,6]
+4- [2,3,4,5,7,9,8,15,6]
+5- [2,3,4,5,6,9,8,15,7]
+6- [2,3,4,5,6,7,8,15,9]
+7- [2,3,4,5,6,7,8,15,9]
+8- [2,3,4,5,6,7,8,9,15]
