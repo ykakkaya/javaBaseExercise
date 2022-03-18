@@ -3,21 +3,32 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	    int first=1;
-        int second=1;
-        int number=first+second;
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("kaç elemanlı olsun");
-        int elemanSayisi=scanner.nextInt();
+	    Scanner scanner=new Scanner(System.in);
+        System.out.println("bir sayı giriniz");
+        int number=scanner.nextInt();
+        System.out.println(isPalindrom(number));
 
-        System.out.print(first+","+second+","+number+",");
-        for (int i=1; i<=(elemanSayisi-3);i++){
-            first =second;
-            second=number;
-            number=first+second;
-            System.out.print(number+",");
-
-
-        }
     }
+
+    public static boolean isPalindrom(int number){
+
+       int temp= number;
+       int reverseNumber=0;
+       int lastNumber;
+       while (temp!=0){
+           lastNumber= temp%10;
+           reverseNumber=(reverseNumber*10)+lastNumber;
+           temp/=10;
+       }
+       if (number==reverseNumber) {
+           return true;
+       }else{
+            return false;
+       }
+
+
+
+       }
+
+
 }
