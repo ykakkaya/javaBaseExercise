@@ -3,27 +3,29 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean isControl = true;
+        boolean isControl2=true;
+        System.out.println("bir sayı giriniz");
+        int number = scanner.nextInt();
+        int temp=number;
+        System.out.print(number + " ");
+        while (isControl) {
 
-        for(int i=2;i<=100;i++)
-        {
-            int kontrol = 0;
-            for (int j = 2; j < i; j++)
-            {
-                if (i% j == 0)
-                {
-                    kontrol = 1;
-                    break;
-
+            number -= 5;
+            System.out.print(number + " ");
+            if (number < 0 || number == 0) {
+                while (isControl2) {
+                    number += 5;
+                    System.out.print(number + " ");
+                    if (number == temp) {
+                        isControl = false;
+                        isControl2=false;
+                    }
                 }
             }
-
-            if(kontrol==0)
-            {
-                System.out.print(i+" ");
-
-            }
         }
+
+
     }
 }
-
-
