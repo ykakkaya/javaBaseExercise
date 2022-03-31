@@ -1,31 +1,38 @@
 package com.company;
-import java.util.*;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        boolean isControl = true;
-        boolean isControl2=true;
-        System.out.println("bir sayı giriniz");
-        int number = scanner.nextInt();
-        int temp=number;
-        System.out.print(number + " ");
-        while (isControl) {
 
-            number -= 5;
-            System.out.print(number + " ");
-            if (number < 0 || number == 0) {
-                while (isControl2) {
-                    number += 5;
-                    System.out.print(number + " ");
-                    if (number == temp) {
-                        isControl = false;
-                        isControl2=false;
-                    }
+            int [] list = {15,12,788,1,-1,-778,2,0};
+            int a;
+            int x=0;
+            int y=0;
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("Dizi : " + Arrays.toString(list));
+            System.out.print("bir sayı giriniz : ");
+            a = input.nextInt();
+
+            Arrays.sort(list);
+
+            for (int i =list.length-1; i>=0;i--){
+                if(a>list[i]){
+                    x = list[i];
+                    break;
                 }
             }
+            for (int j =0; j<list.length-1;j++){
+                if(a<list[j]){
+                    y = list[j];
+                    break;
+                }
+            }
+            System.out.println("Girilen sayıdan küçük en yakın değer : " + x);
+            System.out.println("Girilen sayıdan büyük en yakın değer : " + y);
         }
-
-
     }
-}
+
