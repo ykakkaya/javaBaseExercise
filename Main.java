@@ -2,24 +2,31 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
-        int[] arr = {3, 5, 4, 8, 6, 1, 7, 2, 9, 3, 4, 4, 5, 2, 1, 1, 0, 0};
-        tekrar(arr);
-    }
-
-    public static void tekrar(int[] arr) {
-        int[] evenNum = new int[arr.length];
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (i!=j && arr[i] == arr[j] && arr[i] % 2 == 0) {
-                    evenNum[count] = arr[i];
-                    count++;
-                }
+        static boolean isPalindrome(String str) {
+            int i = 0, j = str.length() - 1;
+            while (i < j) {
+                if (str.charAt(i) != str.charAt(j))
+                    return false;
+                i++;
+                j--;
             }
+            return true;
         }
-        for (int num: evenNum) {
-            System.out.print(num+",");
+
+        static boolean isPalindrome2(String str) {
+            String reverse = "";
+            for (int i = str.length() - 1; i >= 0; i--) {
+                reverse += str.charAt(i);
+            }
+
+            if (str.equals(reverse))
+                return true;
+            else
+                return false;
         }
-    }
+
+        public static void main(String[] args) {
+            System.out.println(isPalindrome("abba"));
+        }
+
 }
